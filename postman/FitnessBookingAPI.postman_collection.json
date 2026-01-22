@@ -1,0 +1,197 @@
+{
+	"info": {
+		"_postman_id": "6bd37c54-1f4c-4aa1-9e66-d4b7f92136c2",
+		"name": "Fitness Booking API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "51255924",
+		"_collection_link": "https://aryanmishrajh-7271196.postman.co/workspace/Aryan-Mishra's-Workspace~110ac668-8896-4ef5-80cc-df9cf15803e2/collection/51255924-6bd37c54-1f4c-4aa1-9e66-d4b7f92136c2?action=share&source=collection_link&creator=51255924"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Test User\",\r\n  \"email\": \"testuser01@gmail.com\",\r\n  \"password\": \"test1234\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/signup\n",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"signup\n"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login JSON",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"testuser01@gmail.com\",\r\n  \"password\": \"test1234\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/login-json",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"login-json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Classes",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/classes\n",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"classes\n"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Class",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Yoga Flow\",\r\n  \"dateTime\": \"2026-02-10T10:00:00Z\",\r\n  \"instructor\": \"John Doe\",\r\n  \"availableSlots\": 5\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/classes\n",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"classes\n"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Book Class",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"class_id\": 1,\r\n  \"client_name\": \"Test User\",\r\n  \"client_email\": \"testuser01@gmail.com\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/book\n",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"book\n"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Bookings",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/bookings\n",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"bookings\n"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
