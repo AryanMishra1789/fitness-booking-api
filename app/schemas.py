@@ -2,7 +2,7 @@ from pydantic import BaseModel, EmailStr, Field
 from datetime import datetime
 
 
-# ---------- AUTH ----------
+# AUTH
 class SignupRequest(BaseModel):
     name: str = Field(min_length=2, max_length=100)
     email: EmailStr
@@ -22,7 +22,7 @@ class TokenResponse(BaseModel):
     token_type: str = "bearer"
 
 
-# ---------- CLASSES ----------
+# CLASSES
 class CreateClassRequest(BaseModel):
     name: str = Field(min_length=2, max_length=120)
     dateTime: datetime
@@ -38,7 +38,7 @@ class ClassResponse(BaseModel):
     availableSlots: int
 
 
-# ---------- BOOKINGS ----------
+# BOOKINGS 
 class CreateBookingRequest(BaseModel):
     # gt=0 ensures class_id must be a positive integer
     # example=1 makes Swagger docs show a realistic sample value
